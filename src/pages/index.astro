@@ -1,0 +1,488 @@
+---
+import Welcome from '../components/Welcome.astro';
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout title="Equilibrium - Where your finances find their balance">
+  
+  <!-- Navbar -->
+ <nav class="bg-white/95 backdrop-blur-md shadow-lg sticky top-0 z-50 border-b border-gray-100">
+	<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+	  <div class="flex items-center space-x-3">
+	   
+		<span class="font-bold text-2xl bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">Equilibrium</span>
+	  </div>
+	  <div class="hidden md:flex space-x-8">
+		<a href="#features" class="text-gray-700 hover:text-indigo-600 transition duration-300 font-medium flex items-center space-x-1">
+		  <i class="fa-solid fa-star text-xs"></i>
+		  <span>Features</span>
+		</a>
+		<a href="#blog" class="text-gray-700 hover:text-indigo-600 transition duration-300 font-medium flex items-center space-x-1">
+		  <i class="fa-solid fa-newspaper text-xs"></i>
+		  <span>Blog</span>
+		</a>
+		<a href="#faq" class="text-gray-700 hover:text-indigo-600 transition duration-300 font-medium flex items-center space-x-1">
+		  <i class="fa-solid fa-circle-question text-xs"></i>
+		  <span>FAQ</span>
+		</a>
+		<a href="#pricing" class="text-gray-700 hover:text-indigo-600 transition duration-300 font-medium flex items-center space-x-1">
+		  <i class="fa-solid fa-tag text-xs"></i>
+		  <span>Pricing</span>
+		   <a href="about" class="text-gray-700 hover:text-indigo-600 transition duration-300 font-medium flex items-center space-x-1">
+		  <i class="fa-solid fa-circle-question text-xs"></i>
+		  <span>About us</span>
+		</a>
+		</a>
+	  </div>
+	  <div class="flex space-x-3">
+		<a href="login.html" class="hidden md:flex items-center space-x-2 text-indigo-600 border-2 border-indigo-600 px-5 py-2.5 rounded-xl hover:bg-indigo-50 transition duration-300 font-medium">
+		  <i class="fa-solid fa-right-to-bracket"></i>
+		  <span>Sign In</span>
+		</a>
+		<a href="register.html" class="flex items-center space-x-2 bg-gradient-to-r from-indigo-600 to-purple-600 text-white px-5 py-2.5 rounded-xl hover:shadow-lg transform hover:-translate-y-0.5 transition duration-300 font-medium">
+		  <i class="fa-solid fa-user-plus"></i>
+		  <span>Sign Up</span>
+		</a>
+	  </div>
+	</div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="hero" class="pt-20 pb-32 px-4 bg-gradient-to-br from-indigo-50 via-purple-50 to-white relative overflow-hidden">
+	<div class="absolute top-0 right-0 w-96 h-96 bg-indigo-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow"></div>
+	<div class="absolute bottom-0 left-0 w-96 h-96 bg-purple-200 rounded-full filter blur-3xl opacity-20 animate-pulse-slow" style="animation-delay: 1.5s;"></div>
+	
+	<div class="container mx-auto flex flex-col md:flex-row items-center relative z-10">
+	  <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+		<div class="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full mb-6 text-sm font-medium">
+		  <i class="fa-solid fa-rocket"></i>
+		  <span>New: Apple Pay Integration</span>
+		</div>
+		<h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+		  Control your <span class="gradient-text">financial future</span> today
+		</h1>
+		<p class="text-gray-600 text-lg md:text-xl mb-8 leading-relaxed">
+		  The personal finance app that combines simplicity with analytical power to help you manage your money intelligently.
+		</p>
+		<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+		  <a href="register.html" class="gradient-bg bg-blue-900 to bg-amber-50 text-white font-semibold py-4 px-8 rounded-xl shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition duration-300 text-lg flex items-center justify-center space-x-2">
+			<i class="fa-solid fa-sparkles"></i>
+			<span>Start Free</span>
+		  </a>
+		  <button class="bg-white text-indigo-600 border-2 border-indigo-200 font-semibold py-4 px-8 rounded-xl hover:bg-indigo-50 hover:border-indigo-300 transition duration-300 text-lg flex items-center justify-center space-x-2 shadow-lg">
+			<i class="fa-solid fa-circle-play"></i>
+			<span>Watch Demo</span>
+		  </button>
+		</div>
+		<div class="mt-10 flex items-center">
+		  <div class="flex -space-x-3">
+			<img class="w-12 h-12 rounded-full border-3 border-white shadow-md" src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916_640.png" alt="User" />
+			<img class="w-12 h-12 rounded-full border-3 border-white shadow-md" src="https://cdn.pixabay.com/photo/2016/11/18/23/38/child-1837375_640.png" alt="User" />
+			<img class="w-12 h-12 rounded-full border-3 border-white shadow-md" src="https://cdn.pixabay.com/photo/2013/07/13/10/07/man-156584_640.png" alt="User" />
+			<div class="w-12 h-12 rounded-full border-3 border-white bg-indigo-100 flex items-center justify-center shadow-md">
+			  <span class="text-indigo-600 font-bold text-sm">+10K</span>
+			</div>
+		  </div>
+		  <div class="ml-4">
+			<p class="text-gray-700 font-medium">More than <span class="font-bold text-indigo-600">10,000+</span> users</p>
+			<div class="flex items-center space-x-1 text-yellow-500 text-sm">
+			  <i class="fa-solid fa-star"></i>
+			  <i class="fa-solid fa-star"></i>
+			  <i class="fa-solid fa-star"></i>
+			  <i class="fa-solid fa-star"></i>
+			  <i class="fa-solid fa-star"></i>
+			  <span class="text-gray-600 ml-1">(4.9/5)</span>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="md:w-1/2">
+		<div class="relative">
+		  <div class="absolute inset-0 bg-gradient-to-br from-indigo-300 to-purple-300 rounded-3xl transform rotate-3 opacity-50"></div>
+		  <img src="https://cdn.pixabay.com/photo/2017/10/25/19/45/piggy-bank-2889042_1280.jpg" alt="Equilibrium dashboard" class="relative rounded-3xl shadow-2xl z-10 transform hover:scale-105 transition duration-500" />
+		  <div class="absolute -bottom-8 -right-8 bg-white p-5 rounded-2xl shadow-2xl z-20 flex items-center border border-gray-100">
+			<div class="bg-gradient-to-br from-green-400 to-emerald-500 p-3 rounded-xl mr-4 shadow-lg">
+			  <i class="fa-solid fa-arrow-trend-up text-white text-xl"></i>
+			</div>
+			<div>
+			  <p class="text-xs text-gray-500 font-medium uppercase tracking-wide">Monthly Savings</p>
+			  <p class="font-bold text-2xl text-gray-800">+$350.400</p>
+			  <p class="text-xs text-green-600 font-medium flex items-center space-x-1">
+				<i class="fa-solid fa-arrow-up"></i>
+				<span>+12% vs last month</span>
+			  </p>
+			</div>
+		  </div>
+		  <div class="absolute -top-8 -left-8 bg-white p-4 rounded-2xl shadow-xl z-20 flex items-center space-x-3 border border-gray-100">
+			<div class="bg-gradient-to-br from-blue-400 to-indigo-500 p-2 rounded-lg">
+			  <i class="fa-solid fa-shield-halved text-white"></i>
+			</div>
+			<span class="text-sm font-semibold text-gray-700">100% Secure</span>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+	   <div class="mt-20 bg-indigo-50 rounded-2xl p-8 md:p-12">
+				<div class="flex flex-col md:flex-row items-center">
+				  <div class="md:w-1/2 mb-6 md:mb-0">
+					<h3 class="text-2xl md:text-3xl font-bold mb-4">Visualize your finances like never before</h3>
+					<p class="text-gray-600 mb-6">
+					  Intuitive dashboards that let you understand your financial situation at a glance, with interactive charts and detailed reports.
+					</p>
+					<ul class="space-y-3">
+					  <li class="flex items-center">
+						<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
+						  <i class="fa-solid fa-check text-green-500 text-sm"></i>
+						</div>
+						<span class="text-gray-700">Personalized analytics</span>
+					  </li>
+					  <li class="flex items-center">
+						<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
+						  <i class="fa-solid fa-check text-green-500 text-sm"></i>
+						</div>
+						<span class="text-gray-700">Smart projections</span>
+					  </li>
+					  <li class="flex items-center">
+						<div class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-3">
+						  <i class="fa-solid fa-check text-green-500 text-sm"></i>
+						</div>
+						<span class="text-gray-700">Automatic categorization</span>
+					  </li>
+					</ul>
+				  </div>
+				  <div class="md:w-1/2 md:pl-10">
+					<img 
+					  src="https://cdn.pixabay.com/photo/2019/10/25/11/07/business-4576778_1280.jpg" 
+					  alt="Financial dashboard" 
+					  class="rounded-xl shadow-lg"
+					/>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </section>
+  <!-- Features -->
+  <section id="features" class="py-20 bg-white relative">
+	<div class="container mx-auto px-4 text-center">
+	  <div class="inline-flex items-center space-x-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-full mb-4 text-sm font-medium">
+		<i class="fa-solid fa-wand-magic-sparkles"></i>
+		<span>Powerful features</span>
+	  </div>
+	  <h2 class="text-3xl md:text-4xl font-bold mb-4">Everything you need for your finances</h2>
+	  <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+		Intuitive tools designed for any level of experience, helping you take complete control of your money.
+	  </p>
+	  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+		<div class="bg-gradient-to-br from-white to-indigo-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-indigo-100">
+		  <div class="w-16 h-16 gradient-bg rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto transform hover:rotate-12 transition-transform duration-300">
+			<i class="fa-solid fa-chart-line text-white text-2xl"></i>
+		  </div>
+		  <h3 class="text-xl font-bold mb-3 text-gray-800">Smart Tracking</h3>
+		  <p class="text-gray-600 leading-relaxed">Monitor your income and expenses with automatic categorized analysis.</p>
+		  <div class="mt-4 flex items-center justify-center space-x-1 text-indigo-600 text-sm font-medium">
+			<span>Discover more</span>
+			<i class="fa-solid fa-arrow-right text-xs"></i>
+		  </div>
+		</div>
+		<div class="bg-gradient-to-br from-white to-purple-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-purple-100">
+		  <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto transform hover:rotate-12 transition-transform duration-300">
+			<i class="fa-solid fa-bullseye text-white text-2xl"></i>
+		  </div>
+		  <h3 class="text-xl font-bold mb-3 text-gray-800">Financial Goals</h3>
+		  <p class="text-gray-600 leading-relaxed">Set and track your savings and investment objectives with ease.</p>
+		  <div class="mt-4 flex items-center justify-center space-x-1 text-purple-600 text-sm font-medium">
+			<span>Discover more</span>
+			<i class="fa-solid fa-arrow-right text-xs"></i>
+		  </div>
+		</div>
+		<div class="bg-gradient-to-br from-white to-blue-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-blue-100">
+		  <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto transform hover:rotate-12 transition-transform duration-300">
+			<i class="fa-solid fa-chart-pie text-white text-2xl"></i>
+		  </div>
+		  <h3 class="text-xl font-bold mb-3 text-gray-800">Detailed Visualization</h3>
+		  <p class="text-gray-600 leading-relaxed">Discover where your money goes with detailed visual statistics.</p>
+		  <div class="mt-4 flex items-center justify-center space-x-1 text-blue-600 text-sm font-medium">
+			<span>Discover more</span>
+			<i class="fa-solid fa-arrow-right text-xs"></i>
+		  </div>
+		</div>
+		<div class="bg-gradient-to-br from-white to-amber-50 p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 border border-amber-100">
+		  <div class="w-16 h-16 bg-gradient-to-br from-amber-500 to-orange-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg mx-auto transform hover:rotate-12 transition-transform duration-300">
+			<i class="fa-solid fa-bell text-white text-2xl"></i>
+		  </div>
+		  <h3 class="text-xl font-bold mb-3 text-gray-800">Smart Alerts</h3>
+		  <p class="text-gray-600 leading-relaxed">Receive automatic reminders and personalized advice.</p>
+		  <div class="mt-4 flex items-center justify-center space-x-1 text-amber-600 text-sm font-medium">
+			<span>Discover more</span>
+			<i class="fa-solid fa-arrow-right text-xs"></i>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- Blog -->
+  <section id="blog" class="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">
+	<div class="container mx-auto px-4 text-center">
+	  <div class="inline-flex items-center space-x-2 bg-indigo-100 text-indigo-700 px-4 py-2 rounded-full mb-4 text-sm font-medium">
+		<i class="fa-solid fa-lightbulb"></i>
+		<span>Learn with us</span>
+	  </div>
+	  <h2 class="text-3xl md:text-4xl font-bold mb-4">Latest blog articles</h2>
+	  <p class="text-gray-600 text-lg max-w-2xl mx-auto mb-16">
+		Tips and strategies to improve your financial health.
+	  </p>
+	  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+		<div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+		  <div class="relative overflow-hidden">
+			<img  src="https://cdn.pixabay.com/photo/2017/09/07/08/54/money-2724241_1280.jpg" alt="Blog" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500" />
+			<div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-indigo-600 flex items-center space-x-1 shadow-lg">
+			  <i class="fa-solid fa-fire"></i>
+			  <span>Popular</span>
+			</div>
+		  </div>
+		  <div class="p-6">
+			<div class="flex items-center space-x-3 mb-3 text-sm text-gray-500">
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-calendar-days"></i>
+				<span>Nov 15, 2025</span>
+			  </span>
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-clock"></i>
+				<span>5 min</span>
+			  </span>
+			</div>
+			<h3 class="text-xl font-bold mb-3 text-gray-800">How to create an effective budget</h3>
+			<p class="text-gray-600 mb-4 leading-relaxed">Learn to organize your income and expenses with a clear structure.</p>
+			<a href="#" class="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 font-semibold">
+			  <span>Read more</span>
+			  <i class="fa-solid fa-arrow-right text-sm"></i>
+			</a>
+		  </div>
+		</div>
+		<div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+		  <div class="relative overflow-hidden">
+			<img src="https://cdn.pixabay.com/photo/2018/08/10/15/43/woman-3597095_1280.jpg" alt="Blog" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500" />
+			<div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-red-600 flex items-center space-x-1 shadow-lg">
+			  <i class="fa-solid fa-exclamation-triangle"></i>
+			  <span>Important</span>
+			</div>
+		  </div>
+		  <div class="p-6">
+			<div class="flex items-center space-x-3 mb-3 text-sm text-gray-500">
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-calendar-days"></i>
+				<span>Nov 12, 2025</span>
+			  </span>
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-clock"></i>
+				<span>7 min</span>
+			  </span>
+			</div>
+			<h3 class="text-xl font-bold mb-3 text-gray-800">The 5 most common financial mistakes</h3>
+			<p class="text-gray-600 mb-4 leading-relaxed">Avoid the traps that take you away from your economic goals.</p>
+			<a href="#" class="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 font-semibold">
+			  <span>Read more</span>
+			  <i class="fa-solid fa-arrow-right text-sm"></i>
+			</a>
+		  </div>
+		</div>
+		<div class="bg-white rounded-2xl shadow-xl hover:shadow-2xl transform hover:-translate-y-2 transition duration-300 overflow-hidden">
+		  <div class="relative overflow-hidden">
+			<img src="https://plus.unsplash.com/premium_photo-1681487769650-a0c3fbaed85a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=955" alt="Blog" class="w-full h-56 object-cover transform hover:scale-110 transition duration-500" />
+			<div class="absolute top-4 right-4 bg-white px-3 py-1 rounded-full text-xs font-bold text-green-600 flex items-center space-x-1 shadow-lg">
+			  <i class="fa-solid fa-seedling"></i>
+			  <span>New</span>
+			</div>
+		  </div>
+		  <div class="p-6">
+			<div class="flex items-center space-x-3 mb-3 text-sm text-gray-500">
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-calendar-days"></i>
+				<span>Nov 10, 2025</span>
+			  </span>
+			  <span class="flex items-center space-x-1">
+				<i class="fa-solid fa-clock"></i>
+				<span>6 min</span>
+			  </span>
+			</div>
+			<h3 class="text-xl font-bold mb-3 text-gray-800">How to start investing without fear</h3>
+			<p class="text-gray-600 mb-4 leading-relaxed">We show you the first steps to put your money to work.</p>
+			<a href="#" class="inline-flex items-center space-x-2 text-indigo-600 hover:text-indigo-700 font-semibold">
+			  <span>Read more</span>
+			  <i class="fa-solid fa-arrow-right text-sm"></i>
+			</a>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 bg-white">
+	<div class="container mx-auto px-4">
+	  <div class="text-center mb-16">
+		<div class="inline-flex items-center space-x-2 bg-blue-100 text-blue-700 px-4 py-2 rounded-full mb-4 text-sm font-medium">
+		  <i class="fa-solid fa-messages-question"></i>
+		  <span>Have questions?</span>
+		</div>
+		<h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently asked questions</h2>
+		<p class="text-gray-600 text-lg">We answer your most common questions</p>
+	  </div>
+	  <div class="max-w-3xl mx-auto space-y-6">
+		<div class="bg-gradient-to-br from-white to-indigo-50 border-2 border-indigo-100 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+		  <div class="flex justify-between items-start">
+			<div class="flex-1">
+			  <h3 class="font-bold text-xl mb-3 text-gray-800 flex items-center space-x-2">
+				<i class="fa-solid fa-lock text-indigo-600"></i>
+				<span>How do you protect my financial data?</span>
+			  </h3>
+			  <p class="text-gray-600 leading-relaxed">We use bank-grade AES-256 encryption and two-factor authentication to ensure your security. We also never store your banking passwords.</p>
+			</div>
+			<div class="w-12 h-12 bg-indigo-100 rounded-xl flex items-center justify-center ml-4">
+			  <i class="fa-solid fa-shield-check text-indigo-600 text-xl"></i>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="bg-gradient-to-br from-white to-purple-50 border-2 border-purple-100 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+		  <div class="flex justify-between items-start">
+			<div class="flex-1">
+			  <h3 class="font-bold text-xl mb-3 text-gray-800 flex items-center space-x-2">
+				<i class="fa-solid fa-building-columns text-purple-600"></i>
+				<span>Can I connect my bank accounts?</span>
+			  </h3>
+			  <p class="text-gray-600 leading-relaxed">Yes, you can connect your accounts for automatic and secure transaction tracking. We support more than 50 banks in Argentina.</p>
+			</div>
+			<div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center ml-4">
+			  <i class="fa-solid fa-link text-purple-600 text-xl"></i>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="bg-gradient-to-br from-white to-blue-50 border-2 border-blue-100 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+		  <div class="flex justify-between items-start">
+			<div class="flex-1">
+			  <h3 class="font-bold text-xl mb-3 text-gray-800 flex items-center space-x-2">
+				<i class="fa-solid fa-mobile-screen text-blue-600"></i>
+				<span>Do you have a mobile version?</span>
+			  </h3>
+			  <p class="text-gray-600 leading-relaxed">Yes, our mobile app is available for iOS and Android with all the features of the web version, including push notifications.</p>
+			</div>
+			<div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center ml-4">
+			  <i class="fa-brands fa-app-store-ios text-blue-600 text-xl"></i>
+			</div>
+		  </div>
+		</div>
+		
+		<div class="bg-gradient-to-br from-white to-green-50 border-2 border-green-100 rounded-2xl p-6 hover:shadow-xl transition duration-300">
+		  <div class="flex justify-between items-start">
+			<div class="flex-1">
+			  <h3 class="font-bold text-xl mb-3 text-gray-800 flex items-center space-x-2">
+				<i class="fa-solid fa-credit-card text-green-600"></i>
+				<span>How do payment plans work?</span>
+			  </h3>
+			  <p class="text-gray-600 leading-relaxed">You can start for free and upgrade anytime. Plans are billed monthly and you can cancel whenever you want without penalties.</p>
+			</div>
+			<div class="w-12 h-12 bg-green-100 rounded-xl flex items-center justify-center ml-4">
+			  <i class="fa-solid fa-circle-check text-green-600 text-xl"></i>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- Pricing -->
+  <section id="pricing" class="py-20 bg-gray-50">
+	<div class="container mx-auto px-4 text-center">
+	  <h2 class="text-3xl md:text-4xl font-bold mb-4">Plans for every goal</h2>
+	  <p class="text-gray-600 text-lg mb-16 max-w-2xl mx-auto">
+		Start for free and grow with tools that adapt to your needs.
+	  </p>
+	  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+		<div class="pricing-card bg-white p-8 rounded-2xl shadow-custom flex flex-col items-center">
+		  <h3 class="text-2xl font-semibold mb-4">Basic</h3>
+		  <p class="text-gray-600 mb-6">Ideal for users who are just starting to manage their finances.</p>
+		  <p class="text-4xl font-bold mb-6">$0<span class="text-lg text-gray-500">/month</span></p>
+		  <ul class="text-gray-600 mb-8 space-y-2">
+			<li>✔ Manual tracking</li>
+			<li>✔ Monthly reports</li>
+			<li>✖ Bank connection</li>
+		  </ul>
+		  <a href="#" class="gradient-bg text-white py-3 px-8 rounded-lg">Get Started</a>
+		</div>
+		<div class="pricing-card bg-white p-8 rounded-2xl shadow-custom border-2 border-indigo-600 flex flex-col items-center">
+		  <h3 class="text-2xl font-semibold mb-4 text-indigo-600">Pro</h3>
+		  <p class="text-gray-600 mb-6">Perfect for those who want total control.</p>
+		  <p class="text-4xl font-bold mb-6">$9.99<span class="text-lg text-gray-500">/month</span></p>
+		  <ul class="text-gray-600 mb-8 space-y-2">
+			<li>✔ Bank connection</li>
+			<li>✔ Advanced reports</li>
+			<li>✔ Custom goals</li>
+		  </ul>
+		  <a href="#" class="gradient-bg text-white py-3 px-8 rounded-lg">Get Started</a>
+		</div>
+		<div class="pricing-card bg-white p-8 rounded-2xl shadow-custom flex flex-col items-center">
+		  <h3 class="text-2xl font-semibold mb-4">Enterprise</h3>
+		  <p class="text-gray-600 mb-6">Designed for teams and startups.</p>
+		  <p class="text-4xl font-bold mb-6">$19.99<span class="text-lg text-gray-500">/month</span></p>
+		  <ul class="text-gray-600 mb-8 space-y-2">
+			<li>✔ Multi-user</li>
+			<li>✔ Priority support</li>
+			<li>✔ Integration API</li>
+		  </ul>
+		  <a href="#" class="gradient-bg text-white py-3 px-8 rounded-lg">Get Started</a>
+		</div>
+	  </div>
+	</div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 gradient-bg text-white text-center">
+	<div class="container mx-auto px-4">
+	  <h2 class="text-3xl md:text-4xl font-bold mb-6 text-black">Take the first step towards your financial goals</h2>
+	  <p class="text-lg mb-10 text-gray-700">Join thousands of users who already trust Equilibrium.</p>
+	  <a href="register.html" class="bg-black text-indigo-600 font-medium py-3 px-10 rounded-lg hover:bg-indigo-100 transition duration-300 text-lg">Start Free</a>
+	</div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-12">
+	<div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+	  <div>
+		<h3 class="text-xl font-bold text-white mb-4">Equilibrium</h3>
+		<p>Your ally in intelligent personal finance management.</p>
+	  </div>
+	  <div>
+		<h4 class="text-lg font-semibold text-white mb-4">Quick links</h4>
+		<ul class="space-y-2">
+		  <li><a href="#features" class="hover:text-white">Features</a></li>
+		  <li><a href="#blog" class="hover:text-white">Blog</a></li>
+		  <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+		  <li><a href="#pricing" class="hover:text-white">Pricing</a></li>
+		</ul>
+	  </div>
+	  <div>
+		<h4 class="text-lg font-semibold text-white mb-4">Legal</h4>
+		<ul class="space-y-2">
+		  <li><a href="#" class="hover:text-white">Terms of use</a></li>
+		  <li><a href="#" class="hover:text-white">Privacy policy</a></li>
+		</ul>
+	  </div>
+	  <div>
+		<h4 class="text-lg font-semibold text-white mb-4">Follow us</h4>
+		<div class="flex space-x-4 text-xl">
+		  <a href="#"><i class="fa-brands fa-facebook hover:text-white"></i></a>
+		  <a href="#"><i class="fa-brands fa-instagram hover:text-white"></i></a>
+		  <a href="#"><i class="fa-brands fa-twitter hover:text-white"></i></a>
+		</div>
+	  </div>
+	</div>
+	<div class="text-center mt-10 text-sm text-gray-500">© 2025 Equilibrium. All rights reserved.</div>
+  </footer>
+</Layout>
